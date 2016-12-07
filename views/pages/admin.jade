@@ -1,0 +1,41 @@
+extends ../layout
+
+block content
+	.container
+		.row
+			from.form-horizontal(method="post", action="/admin/student")
+				.from-group
+					label.col-sm-2.control-label(for="inputTitle") 学生名字
+					.col-sm-10
+						input#inputTitle.form-control(type="text", name="student[title]", value="#{student.title}")
+				.from-group
+					label.col-sm-2.control-label(for="inputDoctor") 老师
+					.col-sm-10
+						input#inputDoctor.form-control(type="text", name="student[doctor]", value="#{student.doctor}")
+				.from-group
+					label.col-sm-2.control-label(for="inputCountry") 国家
+					.col-sm-10
+						input#inputCountry.form-control(type="text", name="student[country]", value="#{student.country}")
+				.from-group
+					label.col-sm-2.control-label(for="inputLanguage") 语言
+					.col-sm-10
+						input#inputLanguage.form-control(type="text", name="student[language]", value="#{student.language}")
+				.from-group
+					label.col-sm-2.control-label(for="inputPoster") 海报地址
+					.col-sm-10
+						input#inputPoster.form-control(type="text", name="student[poster]", value="#{student.poster}")
+				.from-group
+					label.col-sm-2.control-label(for="inputFlash") 课程地址
+					.col-sm-10
+						input#inputFlash.form-control(type="text", name="student[img]", value="#{student.img}")
+				.from-group
+					label.col-sm-2.control-label(for="inputYear") 时间
+					.col-sm-10
+						input#inputYear.form-control(type="text", name="student[year]", value="#{student.year}")
+				.from-group
+					label.col-sm-2.control-label(for="inputSummary") 详细
+					.col-sm-10
+						input#inputSummary.form-control(type="text", name="student[summary]", value="#{student.summary}")
+				.from-grop
+					.col-sm-offset-2.col-sm-10
+					button.btn.btn-default(type="submit") 插入

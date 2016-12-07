@@ -1,0 +1,21 @@
+extends ../layout
+
+block content
+	.container
+		.row
+			.col-md-6
+				img(src='http://www.tjoe18.cn/firPage/pic/35.jpg', width="650", height="400", align="middle")
+			.col-md-6
+				dl.dl-horizontal
+					dt 课程名称
+					dd= student.title
+					dt 老师
+					dd= student.doctor
+					dt 国家
+					dd= student.country
+					dt 语言
+					dd= student.language
+					dt 时间
+					dd= student.year
+					dt 简介
+					dd= student.summary
